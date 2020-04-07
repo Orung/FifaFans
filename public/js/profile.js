@@ -72,11 +72,11 @@ function changeTitle(array_elements, element) {
     });
 }
 
-  try {
-    changeTitle([edit_profile, change_password, details_about_you, contact_info], title);  
-  } catch (error) {
-      console.log(error);
-  }
+try {
+    changeTitle([edit_profile, change_password, details_about_you, contact_info], title);
+} catch (error) {
+    console.log(error);
+}
 
 
 
@@ -88,7 +88,7 @@ if (edit_profile_button) {
 
 if (edit_profile_about_button) {
     edit_profile_about_button.addEventListener('click', (e) => {
-     editProfile(e);
+        editProfile(e);
     })
 }
 
