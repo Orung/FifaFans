@@ -72,11 +72,11 @@ function changeTitle(array_elements, element) {
     });
 }
 
-try {
-    changeTitle([edit_profile, change_password, details_about_you, contact_info], title);
-} catch (error) {
-    console.log(error);
-}
+  try {
+    changeTitle([edit_profile, change_password, details_about_you, contact_info], title);  
+  } catch (error) {
+      console.log(error);
+  }
 
 
 
@@ -88,7 +88,7 @@ if (edit_profile_button) {
 
 if (edit_profile_about_button) {
     edit_profile_about_button.addEventListener('click', (e) => {
-        editProfile(e);
+     editProfile(e);
     })
 }
 
@@ -259,13 +259,6 @@ function changePassword(e) {
 
 if (window.location.pathname !== '/login' && window.location.pathname !== '/signup') {
     getProfile()
-}
-
-//side nave section
-function openNav() {
-    document.getElementById("mySidepanel").classList.add("width-250");
-    document.getElementById("mySidepanel").classList.remove("width-0");
-
 }
 
 function closeNav() {
