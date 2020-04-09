@@ -327,6 +327,7 @@
             border-radius: 50% !important;
             object-fit: cover;
         }
+        
         .fix-bottom {
             position: fixed;
             bottom: 0;
