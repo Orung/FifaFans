@@ -4,46 +4,40 @@
         <div class="col-md-4 hidden-mobile mb-5">
        <div> {{> sidenav}}</div>
         </div>
-        <div class="col-lg-8 col-12">
+        <div class="col-md-8">
             <div class="profile-section mb-5">
                 <div class="profile-img">
                     <div class="img-text ">
                     <img src="img/bg-img.jpg" class="img-fluid">
                     </div>
-                    <div class=" row">
-                        <div class="rel-pos col-lg-6 col-12">
-                            <div class="profile-picture ">
-                                <a href="#">
-                                <i class="fa fa-edit"></i>
-                                </a> 
-                            </div>
+                    <div class="profile-overlay"></div>
+                    <div class="profile-content">
+                        <div class="rel-pos row">
+                        <div class="profile-picture col-md-2">
+                            <img src="img/1.png" alt="">
+                            
                         </div> 
-                        <div class="edit-message hidden-mobile col-lg-6 col-12">
-                            <a class="btn btn-primary" href="editprofile">Edit Profile</a>
-                            <a class="btn btn-primary " href="#"><i class="fa fa-comment"></i> Message</a>
+                            <div class="profile-text col-md-6">
+                                <h5 id="user-full-name">Promise Orung</h5>
+                                <h6 id="user-profile-status">Coach</h6>
+                                <div class="mt-3">
+                                    <p id="simple-quotes">No one can make you feel inferior without your consent</p>
+                                    <span><i class="fa fa-map-marker" id="location-profile"></i></span>
+                                    {{!-- <span><i class="fa fa-calendar ml-11" id="date-joined"></i>Joined August 2019</span> --}}
+                                </div>
+                                <div>
+                                    <span><b >99</b> followers</span>
+                                    <span class="ml-11 "><b>50</b>Following</span>
+                                </div>
+                            </div>
+                            <div class="edit-message col-md-4">
+                                <a class="btn btn-primary" href="editprofile">Edit Profile</a>
+                                <a class="btn btn-primary " href="#"><i class="fa fa-comment"></i> Message</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="profile-text col-md-12 col-12">
-                        <h5 id="user-full-name">Promise Orung</h5>
-                        <h6 id="user-profile-status">Coach</h6>  
-                    </div>
-                    <div class="profile-text bt-2 col-md-12 col-12"> 
-                        <div class="">
-                            <p>No one can make you feel inferior without your consent</p>
-                            <span><i class="fa fa-map-marker" id="location-profile"></i>Akwa Ibom, Nigeria</span>
-                            <span><i class="fa fa-calendar ml-11" id="date-joined"></i>Joined August 2019</span>
-                        </div>
-                        <div>
-                            <span><b >99</b> followers</span>
-                            <span class="ml-11 "><b>50</b>Following</span>
-                        </div>
-                    </div>
-                    <div class="edit-profile-mbl d-lg-none pt-2 pb-2 bt-2 col-md-12 col-12"> 
-                        <a href="" class="btn btn-primary"><i class="fa fa-edit"></i>Edit Profile</a>
-                    </div>
-                        
                 </div>
-                </div>
+            </div>
 
               {{> userpost}}
 
