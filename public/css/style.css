@@ -23,7 +23,18 @@ body {
     background-size: cover;
     background-position: top center;
 }
-
+@media (min-width: 1200px)
+{
+.container-wrapper{
+  max-width: 1311px;
+}
+}
+.container-wrapper{width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .wrap {
   display: flex;
     align-items: center;
@@ -271,7 +282,7 @@ a {
 
 /* landing-page */
 #landing-page {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .card {

@@ -7,7 +7,7 @@ const club = document.getElementById('club');
 const status = document.getElementById('status');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirmPassword');
-const checkbox = document.getElementById('checkbox');
+// const checkbox = document.getElementById('checkbox');
 
 if (formList) {
     formList.addEventListener('submit', onsubmit);
