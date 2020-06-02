@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import exphbs from 'express-handlebars';
 import serverRouter from './routes';
-import viewRouter from '../viewRoutes/index';
+import viewRouter from './viewRoutes/index';
 import multer from 'multer';
 
 const upload = multer();

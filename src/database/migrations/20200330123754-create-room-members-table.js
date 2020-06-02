@@ -15,7 +15,8 @@ module.exports = {
         type: Sequelize.UUID
       },
       is_banned: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,

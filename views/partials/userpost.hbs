@@ -7,20 +7,25 @@
             <img src="/img/21104.svg" class="img-prof">
         </div>
         <div class=" flex-grow-1 pd-4 ">
+            <form action="POST" enctype="multipart/form-data">
+
+           
+
             <div class="form-group green-border-focus">
-                <input type="text" placeholder="Tell us how you feel..." id="exampleForm2" class="form-control post-input">
-                
+                <textarea type="text" placeholder="Tell us how you feel..." id="postInput" value="" class="form-control post-input" row="6"></textarea>
             </div>
+            <div class="send-post-icon"><i class="fa fa-send" id="sendPost"></i></div>
         </div>
     </div>
     <div class="create-post-add">
         <div class="d-flex justify-content-between">
             <div class="p-2 text-center"> 
-                <i class="fa fa-paperclip"></i> Photo/Video
+                <input type="file" id="image-upload" accept="audio/*,video/*,image/*"><i class="fa fa-paperclip"></i> Photo/Video
             </div>
-            <div class="p-2 text-right"> 
+            {{!-- <div class="p-2 text-right"> 
                 <i class="fa fa-user"></i> Tag a friend
-            </div>
+            </div> --}}
         </div>
     </div>
+    </form>
 </div>

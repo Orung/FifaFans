@@ -1,55 +1,50 @@
 {{> header}}
+
+<main>
+    <section id="edit-details">
+        <div class="container">
+            <section class="card">
             {{> aboutsidebar}}
-            <div class="col-md-9 mt-5">
-                 {{> profilepix}}
-                <form class="mt-5">
-                    <div class="form-group row">
-                        <label for="inputName3" class="col-sm-2 col-form-label">Full Name</label>
-                        <div class="col-sm-7">
-                        <input type="text" class="form-control" id="input_profile_fullname">
+                    <div class="col-md-8">
+                        <div class="container shrink">
+                            {{> profilepix}}
+                            
+                            <form class="mt-2">
+                                <div class="form-group">
+                                    <label for="fullname">Full Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Fullname" id="input_profile_fullname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">Username:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Username" id="input_profile_username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Gender">Select Gender:</label>
+                                    <select class="form-control" id="input_profile_gender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Status">Select Status:</label>
+                                    <select class="form-control" id="input_profile_status">
+                                        <option>Coach</option>
+                                        <option>Player</option>
+                                        <option>Fan</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary pull-right"
+                                    id="edit_profile_button">Submit</button>
+
+                            </form>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label for="inputUserName3" class="col-sm-2 col-form-label">User Name</label>
-                        <div class="col-sm-7">
-                        <input type="text" class="form-control" id="input_profile_username">
-                        </div>
-                    </div>
-                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-7">
-                        <input type="email" class="form-control" id="input_profile_email">
-                        </div>
-                    </div>                    
-                    <div class="form-group row">
-                        <label for="inputGender3" class="col-sm-2 col-form-label">Gender</label>
-                        <div class="col-sm-7">
-                            <select class="form-control form-control-lg" id="input_profile_gender">
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Others</option>
-                            </select>
-                        </div>
-                    </div>
-                     <div class="form-group row">
-                        <label for="inputStatus3" class="col-sm-2 col-form-label">Status</label>
-                        <div class="col-sm-7">
-                            <select class="form-control form-control-lg" id="input_profile_status">
-                                <option>coach</option>
-                                <option>player</option>
-                                <option>fan</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-9">
-                        <button class="btn btn-primary pull-right" id="edit_profile_button">Submit</button>
-                        </div>
-                    </div>
-                    </form>
-            </div>
+                </div>
         </div>
-        
+    </section>
     </div>
-</div>
+    </section>
+</main>
 

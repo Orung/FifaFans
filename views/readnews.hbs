@@ -2,18 +2,18 @@
 
 <div class="container mt-5">
     <div class="row mb-5">
-        <div class="col-md-4 mb-5">
+        <div class="col-md-4 hidden-mobile mb-5">
             <div> {{> sidenav}}</div>
         </div>
-        <div class="col-md-8">
+        <div class="col-lg-8 col-12">
             <div class="profile-section card mb-5">
                 <div class="profile-img">
                     <div class="img-text ">
-                    <img src="img/bg-img.jpg" class="img-fluid">
+                    <img src="img/bg-img.jpg" class="img-fluid" id="new_image">
                     </div>
                     <div class="pd-15 ">
-                        <h2>Aubameyang battles Fernandes for Premier </h2>
-                        <div class="d-flex justify-content-between">
+                        <h4 id="new_title">Aubameyang battles Fernandes for Premier </h4>
+                        {{!-- <div class="d-flex justify-content-between">
                             <div>
                                 <span> <b>2234</b> Likes </span>
                                 <span class="pl-3"> <b>2234</b> Views </span>
@@ -23,13 +23,13 @@
                                <button class="btn btn-primary">Follow</button>
                                 <button class="btn btn-primary">Follow</button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
             <div class="card mt-5 pd-15">
                 <div class="tap-content-post">
-                    <p>The 30-year-old enjoyed a fine scoring run of three goals in the three league matches he played in February
+                    <p id="new_content">The 30-year-old enjoyed a fine scoring run of three goals in the three league matches he played in February
                     Arsenal captain Pierre-Emerick Aubameyang has been nominated for the Premier League Player of the Month award for February.</p>
 
                     <p>Aubameyang battles Manchester United's January signing Bruno Fernandes, Wolverhampton Wanderers' 
@@ -38,7 +38,7 @@
 
                     <p>In February, the Gabon international scored three goals in three matches to help Mikel Arteta's side keep a 
                     record of two wins and a draw in their league fixtures.</p>
-                    <div class="d-flex justify-content-between">
+                    {{!-- <div class="d-flex justify-content-between">
                         <div class="p-2 text-center"> 
                             <b>123</b> <i class="fa fa-thumbs-up"></i>
                         </div>
@@ -56,8 +56,8 @@
                         <div class="p-2 text-right"> 
                             <i class="fa fa-share-alt"></i> Share
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-4">
+                    </div> --}}
+                    {{!-- <div class="d-flex justify-content-between mt-4">
                         <div class="p-2 comment-img text-center"> 
                             <img src="img/4.jpg" class="" alt="">
                         </div>
@@ -70,39 +70,10 @@
                             <div><i class="fa fa-thumbs-up"></i> Likes<span class="comment-badge">12</span></div>
                             <div><i class="fa fa-comments"></i> Reply <span class="comment-badge">12</span></div>
                             </div>
-                    <div class="d-flex justify-content-between mt-2">
-                        <div class="p-2 comment-img text-center"> 
-                            <img src="img/4.jpg" class="" alt="">
-                        </div>
-                        <div class="p-2 comments-content"> 
-                        <h5>Ayooluwa Lovisgod</h5>
-                            <p class="color-green">Player</p>
-                            <p>Asenal playes against Man-U and score 3:0. I have never seen Asenal becoming a world class 
-                            player. Man-U be strong ooo</p>
-                            <div class="d-flex justify-content-between">
-                            <div><i class="fa fa-thumbs-up"></i> Likes<span class="comment-badge">12</span></div>
-                            <div><i class="fa fa-comments"></i> Reply <span class="comment-badge">12</span></div>
-                            </div>
-                        </div>
                     </div>
-                    </div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-2">
-                        <div class="p-2 comment-img text-center"> 
-                            <img src="img/4.jpg" class="" alt="">
-                        </div>
-                        <div class="p-2 comments-content"> 
-                        <h5>Ayooluwa Lovisgod</h5>
-                            <p class="color-green">Player</p>
-                            <p>Asenal playes against Man-U and score 3:0. I have never seen Asenal becoming a world class 
-                            player. Man-U be strong ooo</p>
-                            <div class="d-flex justify-content-between">
-                            <div><i class="fa fa-thumbs-up"></i> Likes<span class="comment-badge">12</span></div>
-                            <div><i class="fa fa-comments"></i> Reply <span class="comment-badge">12</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between bd-top mt-4">
+                    </div> --}}
+                   
+                    {{!-- <div class="d-flex justify-content-between bd-top mt-4">
                         <div class="text-center">
                             <img src="/img/21104.svg" class="img-prof">
                         </div>
@@ -112,7 +83,7 @@
                                 <i class="fa fa-paperclip clip-attach"></i>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

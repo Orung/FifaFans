@@ -113,6 +113,7 @@ if (logout_user) {
 
 
 function logoutUSer() {
+    prompt('Are you sure? ......')
     localStorage.removeItem('token');
     window.location.replace('/login');
 }
@@ -152,17 +153,8 @@ const fillContact = (data) => {
 }
 
 function getProfile() {
-    const theToken = localStorage.getItem('token');
-    if (!theToken) {
-        alert('Please Login')
-        window.location.replace("/login");
-    }
-    fetch('/api/v1/auth/me', {
-            method: "GET",
-            headers: new Headers({
-                'Authorization': `Bearer ${theToken}`
-            }),
-        })
+    options.method = 'GET'
+    fetch(`${base}auth/me`, options)
         .then(res => res.json())
         .then(x => {
             console.log(x);
@@ -174,6 +166,7 @@ function getProfile() {
                 if (window.location.pathname == '/usercontactinfo') { fillContact(x.data) };
             }
         })
+        .catch((e) => {console.log(e)})
 };
 
 // Edit profile
@@ -215,9 +208,9 @@ function editProfile(e) {
         .then(x => {
             console.log(x);
             if (x.status != 'error') {
-                alert('update successfully')
+                Swal.fire('update successfully')
                 window.location.reload();
-            } else { alert(x.error) };
+            } else { Swal.fire(x.error) };
         })
 };
 
@@ -225,10 +218,10 @@ function editProfile(e) {
 function changePassword(e) {
     e.preventDefault();
     if (!new_pass_change_pass.value || !new_pass_change_pass_confirm.value || !old_pass_change_pass.value) {
-        return alert('Please fill in necessary inputs')
+        return Swal.fire('Please fill in necessary inputs')
     }
     if (new_pass_change_pass.value !== new_pass_change_pass_confirm.value) {
-        return alert('New password and confirm password must be the same')
+        return Swal.fire('New password and confirm password must be the same')
     }
     const theToken = localStorage.getItem('token');
     if (!theToken) {
@@ -250,13 +243,25 @@ function changePassword(e) {
         .then(x => {
             console.log(x);
             if (x.status != 'error') {
-                alert('Password updated successfully')
+                Swal.fire('Password updated successfully')
                 window.location.reload();
-            } else { alert(x.error) };
+            } else { Swal.fire(x.error) };
         })
 };
 
 
 if (window.location.pathname !== '/login' && window.location.pathname !== '/signup') {
     getProfile()
+}
+
+//side nave section
+function openNav() {
+    document.getElementById("mySidepanel").classList.add("width-250");
+    document.getElementById("mySidepanel").classList.remove("width-0");
+
+}
+
+function closeNav() {
+    document.getElementById("mySidepanel").classList.add("width-0");
+    document.getElementById("mySidepanel").classList.remove("width-250");
 }

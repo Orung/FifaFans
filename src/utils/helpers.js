@@ -1,5 +1,8 @@
 /* eslint-disable max-len */
 import Sequelize, { Op, fn, col, and } from 'sequelize';
+import models from '../models'
+
+const { ChatRoomMember, RoomChat } = models;
 
 const helperMethods = {
 	async searchWithCategoryAndLocation (point, category_uuid, Service) {
@@ -380,8 +383,6 @@ const helperMethods = {
 		const datas = await table.findAll({
 			attributes: {
 				exclude: [
-					'createdAt',
-					'password',
 					'updatedAt'
 				]
 			},
@@ -420,7 +421,124 @@ const helperMethods = {
 		return friend;
 	},
 
-	// find a friend table
+	// list user joined rooms
+	async getUserGroups(user, table){
+		try {
+		  // console.log('here it is')
+		return await table.findAll({
+		  where: {member_uuid: user},
+		  include: ['ChatRoom'],
+		});
+		} catch (e) {
+		  console.log(e);
+		}
+		
+	  },
+	
+	async createGroupMember(data) {
+	 const { group_id, user } = data;
+	 console.log(user)
+	 const member =	await ChatRoomMember.create({
+			chatroom_uuid: group_id,
+			member_uuid: user.uuid,
+			is_banned: false,
+		})
+	 return member;
+	},
+
+	async checkRoomMember(user_uuid, group_uuid) {
+		const user = await ChatRoomMember.findOne({
+			where: { member_uuid: user_uuid, chatroom_uuid: group_uuid },
+			attributes: {
+				exclude: [
+					'createdAt',
+					'updatedAt'
+				]
+			}
+		})
+		return user;
+	},
+
+	async saveGroupChat(group_uuid, sender_uuid, parent_uuid, message, sendername){
+		return await RoomChat.create({
+		  parent_uuid,
+		  group_uuid,
+		  sender_uuid,
+		  sendername,
+		  message,
+		});
+	  },
+
+	  // list user joined rooms
+	async getGroupChats(group_uuid, roomChats, room){
+		try {
+		  // console.log('here it is')
+		const dRoom = await  room.findOne({
+			where: { uuid: group_uuid },
+			attributes: {
+				exclude: [
+					'createdAt',
+				]
+			}
+		})
+		const chats = await roomChats.findAll({
+		  where: {group_uuid}
+		});
+		return { room: dRoom.dataValues, chats:chats.map(x => x.dataValues) }
+		} catch (e) {
+		  console.log(e);
+		}
+		
+	  },
+
+	
+	async deleteEntry(table, table_uuid, user_uuid){
+		try {
+		 await table.destroy({
+		 where: { uuid: table_uuid, user_uuid }
+		});
+		} catch (error) {
+		 console.log(error);
+		}
+		
+	},
+
+	// exit a group
+	async exitGroup(table, group_uuid, user_uuid){
+		try {
+		 await table.destroy({
+		 where: {  group_uuid, user_uuid }
+		});
+		} catch (error) {
+		 console.log(error);
+		}
+		
+	},
+
+	// save post
+	async savePost(uuid, name, comment, post_uuid, Post){
+		const post = await Post.findOne({
+			where:{ uuid: post_uuid}
+		});
+		if (post.comment == null) {post.comment = [] }
+		await post.comment.push(
+			{
+		  user_uuid: uuid,
+		  user_name: name,
+		  date_sent: new Date(),
+		  comment,
+	   });
+	   const postUpdate = await Post.update(
+		   {
+			 
+			 comment: post.comment,
+		   },
+		   {
+			 returning: true,
+			 where: { uuid: post_uuid },
+		   },
+		 );
+	  },
 
 };
 export default helperMethods;

@@ -3,6 +3,12 @@ const generateNotification = (user_uuid, message) => ({
     message,
     createdAt: new Date().getTime(),
   });
+
+  const generateMessage = (user, message) => ({
+    user,
+    message,
+    createdAt: new Date().getTime(),
+  });
   
   const responseMessage = (status, message) => ({
     status,
@@ -12,4 +18,5 @@ const generateNotification = (user_uuid, message) => ({
   module.exports = {
     generateNotification,
     responseMessage,
+    generateMessage
   };

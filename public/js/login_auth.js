@@ -11,6 +11,9 @@ if (loginButton) {
 
 
 function submit(e) {
+    tata.info('Signing In', 'Please wait while we are login you in', {
+          duration: 3000
+        })
     e.preventDefault();
 
     if (!email.value || password.value === "") {
@@ -39,7 +42,7 @@ function submit(e) {
                     console.log(x.data.token);
                     localStorage.setItem('token', x.data.token)
                     document.getElementById('success-message').innerHTML = 'Login successful';
-                    return window.location.href = '/news';
+                    return window.location.href = '/';
                 } else {
                     errorMessage.innerHTML = x.error;
                     if (errorMessage.style.display == 'none') {

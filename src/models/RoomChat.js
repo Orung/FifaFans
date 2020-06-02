@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
-    parent_uuid: DataTypes.UUID,
+    parent_uuid: DataTypes.TEXT,
     group_uuid: DataTypes.UUID,
     sender_uuid: DataTypes.UUID,
     sendername: DataTypes.TEXT,

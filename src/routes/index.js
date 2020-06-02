@@ -1,6 +1,8 @@
 import express from 'express';
 import auth from './auth';
 import user from './user';
+import post from './post';
+import room from './room';
 
 export default (app) => {
 	app.use(express.json());
@@ -14,7 +16,7 @@ export default (app) => {
 	);
 
 	app.use('/api/v1', [
-		auth, user
+		auth, user, room, post
 	]);
 
 	app.all('/*', (req, res) =>

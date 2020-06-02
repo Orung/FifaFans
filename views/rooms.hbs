@@ -1,107 +1,79 @@
 {{> header}}
-<div class="container mt-5">
+{{!-- <div class="container mt-5">
 <div class="row">
     <div class="col-md-4 hidden-mobile">
        {{> sidenav}}
     </div>
-    <div class="col-md-8 ">
-        <div class="wrapper pd-3 card">
+    <div class="col-lg-8 col-12 ">
+        <div class=" card">
             <div class="page-title">
                 <h4>Rooms <a href="/create_room" class="pull-right">Create Rooms</a></h4>
             </div>
-            <div class="row ">
-                <div class="col-md-6">
-                    <div class="box pb-3 d-flex border-b justify-content-between  mt-2">
-                        <div class="">
-                            <img src="img/1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="limited-text mr-2">
-                            <h5><a href="#">African All Stars </a> </h5>
-                            <p><span class="bold">8k</span> Post <span class="bold">500</span> Members</p>
-                        </div>
-                        <div class="">
-                            <button class="join-btn btn-default">Join Room</button>
-                        </div> 
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="box pb-3 d-flex border-b justify-content-between  mt-2">
-                        <div class="">
-                            <img src="img/1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="limited-text mr-2">
-                            <h5><a href="/room">African All  Stars African All </a> </h5>
-                            <p><span class="bolder">8k</span> Post <span class="bolder">500</span> Members</p>
-                        </div>
-                        <div class="">
-                            <button class="join-btn btn-default">Join Room</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>   
-            <div class="row ">
-                <div class="col-md-6">
-                    <div class="box pb-3 d-flex border-b justify-content-between  mt-2">
-                        <div class="">
-                            <img src="img/1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="limited-text mr-2">
-                            <h5><a href="#">African All Stars </a> </h5>
-                            <p><span class="bold">8k</span> Post <span class="bold">500</span> Members</p>
-                        </div>
-                        <div class="">
-                            <button class="join-btn btn-default">Join Room</button>
-                        </div> 
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="box pb-3 d-flex border-b justify-content-between  mt-2">
-                        <div class="">
-                            <img src="img/1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="limited-text mr-2">
-                            <h5><a href="/room">African All  Stars African All </a> </h5>
-                            <p><span class="bolder">8k</span> Post <span class="bolder">500</span> Members</p>
-                        </div>
-                        <div class="">
-                            <button class="join-btn btn-default">Join Room</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>   
-            <div class="row ">
-                <div class="col-md-6">
-                    <div class="box pb-3 d-flex border-b justify-content-between  mt-2">
-                        <div class="">
-                            <img src="img/1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="limited-text mr-2">
-                            <h5><a href="#">African All Stars </a> </h5>
-                            <p><span class="bold">8k</span> Post <span class="bold">500</span> Members</p>
-                        </div>
-                        <div class="">
-                            <button class="join-btn btn-default">Join Room</button>
-                        </div> 
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="box pb-3 d-flex border-b justify-content-between  mt-2">
-                        <div class="">
-                            <img src="img/1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="limited-text mr-2">
-                            <h5><a href="/room">African All  Stars African All </a> </h5>
-                            <p><span class="bolder">8k</span> Post <span class="bolder">500</span> Members</p>
-                        </div>
-                        <div class="">
-                            <button class="join-btn btn-default">Join Room</button>
-                        </div> 
-                    </div>
-                </div>
+            <div class="row " id="all-rooms-layout">
+              
             </div>   
                             
             <a href="#" class="text-right py-3">Load More <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </div>
-</div>
+</div> --}}
+
+<main>
+    <section id="landing-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                    {{> sidenav}}
+
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <h5 class="section-title">Rooms</h5>
+                        <hr>
+                        <div id="all-rooms-layout"></div>
+                        <div class="room-box d-flex">
+                            <div class="text-center">
+                                <img src="img/4.jpg" class="img-prof img-fluid">
+                            </div>
+                            <div class="ml-3 room-detail">
+                                <h4><strong><span><a href="#">Manchester united</a></span></strong>
+                                    <span><button class="btn btn-info d-flex pull-right">Join Room</button></span>
+                                </h4>
+                                <p><span>50 Members</span></p>
+                            </div>
+                        </div>
+                        <div class="room-box d-flex">
+                            <div class="text-center">
+                                <img src="img/4.jpg" class="img-prof img-fluid">
+                            </div>
+                            <div class="ml-3 room-detail">
+                                <h4><strong><span><a href="#">Chelsea united</a></span></strong>
+                                    <span><button class="btn btn-info d-flex pull-right">Join Room</button></span>
+                                </h4>
+                                <p><span>50 Members</span></p>
+                
+                            </div>
+                        </div>
+                        <div class="room-box d-flex">
+                            <div class="text-center">
+                                <img src="img/4.jpg" class="img-prof img-fluid">
+                            </div>
+                            <div class="ml-3 room-detail">
+                                <h4><strong><span><a href="#">Manchester united</a></span></strong>
+                                    <span><button class="btn btn-info d-flex pull-right">Join Room</button></span>
+                                </h4>
+                                <p><span>50 Members</span></p>
+                            </div>
+                        </div>
+                        <section class="see-more">
+                            <a href="#" class="pull-right">See more</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>

@@ -1,58 +1,31 @@
 
-<div class="container mt-2 sign-up-container">
-    <div class="card m-auto mt-5 width-50">
-         <div class="card-body">
-             <div class="text-center">
-                {{!-- <img src="" title="logo"> --}}
-                <h2 class="mt- mb- color-blue"><a href="/"><b>Fifafan</b></a></h2>
-                <h2 class="mt-2 mb-2"><b>Create  New Account</b></h2>
-             </div>
-            <form action="" id="form-list"> 
-                <p id="error-message"></p>
-                <p id="success-message"></p>
-                
+
+<div class="wrapper">
+    <div class="signin">
+        <h4 class="text-center">Fifa Fan</h4>
+        <small class="d-flex justify-center my-3">Already have an account?<a class="ml-2" href="#">Log in</a></small>
+        <form id="form-list">
+            <p id="error-message"></p>
+            <p id="success-message"></p>
+            
             <div id="alert_message"></div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Full Name" id="fullName" aria-describedby="nameHelp">
-                    
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="User Name" id="username" aria-describedby="nameHelp">
-                    
-                </div>
-                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email address" id="email" aria-describedby="emailHelp">
-                    
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Club" class="form-control" id="club">
-                </div>
-                <div class="form-group">
-                    <select class="form-control" id="status">
-                        <option = "">Status</option>
-                        <option = "1">coach</option>
-                        <option = "2">player</option>
-                        <option = "3">fan</option>
-                    </select>
-                </div>
-                <div id="pass-message"></div>
-                <div class="form-group">
-                    <label id="message-length"></label>
-                    <input type="password" placeholder="Password" class="form-control" id="password">
-                </div>
-               
-                <div class="form-group">
-                    <input type="password" placeholder="Confirm Password" class="form-control" id="confirmPassword">
-                </div>
-                <div class="form-group text-right form-check">
-                    <label class="form-check-label" for="exampleCheck1">Already have an account? <a href="/login">Login</a></label>
-                </div>
-                
-                <p><small id="emailHelp" class="form-text text-muted">
-                    <label class="checkbox-inline"><input type="checkbox" id="checkbox" value="">By clicking Sign Up, you agree to our </label><a href="">Terms, Data Policy </a>
-                and <a href=""> Policy</a>. </small></p>
-                <button type="submit" class="btn btn-primary width-100">Submit</button>
-            </form>
-        </div>
+            <input type="text" id="fullName" class="form-control" placeholder="Full Name" required autofocus>
+            <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+            <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+            <div class="form-group">
+                <select class="form-control" id="status">
+                    <option value="">Status</option>
+                    <option value="coach">Coach</option>
+                    <option value="player">player</option>
+                    <option value="fan">fan</option>
+                </select>
+            </div>
+            <input type="password" id="password" class="form-control" placeholder="Password" required>
+            <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+
+            <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+
+        </form>
+        <small class="d-flex justify-center mt-2">Forgot Password?<a class="ml-2" href="/forgetpassword">Reset Here</a></small>
     </div>
 </div>

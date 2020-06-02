@@ -9,13 +9,16 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4
       },
       parent_uuid: {
-        type: Sequelize.UUID
+        type: Sequelize.TEXT
       },
       group_uuid: {
         type: Sequelize.UUID
       },
       sender_uuid: {
         type: Sequelize.UUID
+      },
+      sendername: {
+        type: Sequelize.TEXT
       },
       message: {
         type: Sequelize.TEXT
