@@ -112,7 +112,9 @@ const usersPost = (data) => {
                 <img src="/img/21104.svg" class="img-prof">
             </div>
             <div class="tab-profile-detail ml-2">
-              <p class="fan-name">${data.owner_name} <span class="color-red fan-fn">Coach</span> <span class="fan-time"> 1hrs ago</span></p>
+              <p class="fan-name">${data.owner_name} 
+              <span class="color-red fan-fn">Coach</span>
+              <span class="fan-time"> 1hrs ago</span></p>
               
               <p class="my-3">${data.post}</p>
                 ${getMediaType(data)}
@@ -266,7 +268,7 @@ const generalPost = (data) => {
                       <img src="img/4.jpg" class="img-prof">
                     </div>
                     <div class="ml-2">
-                      <h4 class="fan-name">${data.owner_name}<span class="fan-fn"> Player</span> <span class="fan-time">10(s) ago</span></h4>
+                      <h4 class="fan-name"><span class="fan-name-bold">${data.owner_name}</span><br><span class="fan-fn"> Player</span> <span class="fan-time">10(s) ago</span></h4>
                       <p class="comment-p">${data.post}</p>
                        ${getMediaType(data)}
                     </div>

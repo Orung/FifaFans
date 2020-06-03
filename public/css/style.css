@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
   font-family: 'Nunito Sans', sans-serif;
   color: #505962;
-  background: #efefef;
+  background: #f8f9fa;;
   font-size: 16px;
 }
 
@@ -34,6 +34,7 @@ body {
   width: 100%;
     margin-right: auto;
     margin-left: auto;
+ 
 }
 .wrap {
   display: flex;
@@ -110,8 +111,9 @@ a {
   flex-grow: 1;
 }
 .section-title {
-  color: #1c54ee;
+  color: #005391;
   font-weight: 900;
+  border-bottom: 1px solid #005391;
 }
 
 .room-box {
@@ -296,9 +298,15 @@ a{
 
 .card {
   background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow:-15px 0 35px rgba(0,0,0,0.1), 0 -15px 35px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(207, 204, 204, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(207, 204, 204, 0.12);
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 10px;
 }
 
 .img-prof {
@@ -306,6 +314,7 @@ a{
     height: 50px;
     border-radius: 50%;
     border: 2px solid #772020;
+    object-fit: cover;
 }
 
 .flex-end {
@@ -373,6 +382,13 @@ a{
   .logout-img{
     display:none;
   }
+  .container-wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
   .sidepanel {
     width: 0;
     position: fixed;
@@ -452,4 +468,38 @@ a{
 }
 .bg-white{
   background-color:#fff !important;
+}
+
+/* button colors */
+
+.btn-primary{
+  color: #fff;
+  background-color: #005391;
+  border-color: #005391;
+}
+.btn-default{
+  color:#005391;
+}
+
+/* create post */
+.create-post-h5{
+  background-color:#f6f5f5;
+  padding: 3px 20px;
+}
+.create-post-h5 h5{
+  color:#005391;
+  font-weight:bold;
+}
+.p-20{
+  padding: 20px;
+}
+.creat-post-default{
+  font-weight: 900;
+}
+/* post  */
+.fan-time, .fan-fn{
+  font-size:14px;
+}
+.fan-name-bold{
+  color:#005391;
 }
