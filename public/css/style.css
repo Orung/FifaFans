@@ -131,7 +131,6 @@ a {
 
 .scrollable-text {
     overflow: auto;
-    height: 500px;
     display: flex;
   flex-direction: column;
 }
@@ -160,7 +159,15 @@ a {
     background-color: #005391;
     height: 100px;
 }
-
+.likes_comments{
+  font-size:12px;
+  color:#ccc;
+}
+.clip-attach{
+  position: absolute;
+    right: 27px;
+    bottom: 28px;
+}
 #edit-details {
   margin-top: 100px;
 }
@@ -350,7 +357,7 @@ a{
   }
 
   .comment-section {
-    border-top: 3px solid #505962;
+    border-top: 1px solid #c9cacb;
   }
 
   .user {
@@ -502,4 +509,14 @@ a{
 }
 .fan-name-bold{
   color:#005391;
+}
+.pl-10{
+  padding-left:10px;
+}
+.comments{
+  border-radius:50px;
+}
+.form-control:focus{
+  border-color: inherit;
+  box-shadow:inherit;
 }

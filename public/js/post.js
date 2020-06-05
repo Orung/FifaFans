@@ -276,21 +276,12 @@ const generalPost = (data) => {
                   </div>
                   <div class="tap-content-post">
                       
-                     
-                    <div class="d-flex justify-content-between">
-                      <div class="p-2 text-center"> 
-                          <p><b>144</b> <i class="fa fa-thumbs-up"></i></p> 
-                      </div>
-                      <div class="p-2 text-right">
-                        <p><b>44</b> <i class="fa fa-comments"></i> </p>
-                      </div>
-                    </div>
                     <div class="d-flex justify-content-between m-bd">
                       <p class="p-2 text-center">
-                        <i class="fa fa-thumbs-up"></i> Like
+                        <i class="fa fa-thumbs-up"></i> Like <span class="">144</b>
                       </p>
                       <p class="p-2 text-right">
-                        <i class="fa fa-comments"></i> Comment
+                        <i class="fa fa-comments"></i> Comment <span>144</span>
                       </p>
                       <p class="p-2 text-right">
                         <i class="fa fa-share-alt"></i> Share
@@ -304,7 +295,7 @@ const generalPost = (data) => {
                         <img src="/img/21104.svg" class="img-prof">
                       </div>
                       <div class=" flex-grow-1 pd-4 ">
-                        <div class="form-group green-border-focus">
+                        <div class="form-group green-border-focus pl-10">
                           <input type="text" placeholder="Write comments..." id="${data.uuid}-comment-input" class="form-control post-input comments">
                           <p class="fa fa-send border-none clip-attach" onclick="commentPost('${data.uuid}')"></p>
                         </div>
