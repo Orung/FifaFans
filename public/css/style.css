@@ -520,3 +520,48 @@ a{
   border-color: inherit;
   box-shadow:inherit;
 }
+/* side nav */
+.side-like {
+  font-weight: 900;
+  background: rgb(235, 234, 234);
+  border-radius: 10px;
+  padding: 11px;
+}
+.side-like h5 {
+  font-weight: 900;
+  border-bottom: 2px solid rgb(204, 204, 204);
+  padding: 5px 0px;
+  color: rgb(0, 83, 145) !important;
+    font-weight: 900 !important;
+
+}
+.border-b {
+  border-bottom: 2px solid rgb(204, 204, 204);
+}
+.flex-container {
+  display: flex;
+  align-items: stretch;
+}
+.flex-container img {
+  width: 35px;
+  margin-right: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 50%;
+}
+.flex-container > div {
+  padding: 7px 0px;
+}
+.side-content {
+  width: 100%;
+}
+.flex-container p {
+  margin: 0px;
+}
+.status-color {
+  color: green;
+  font-weight: normal;
+  margin-top: -7px !important;
+}
