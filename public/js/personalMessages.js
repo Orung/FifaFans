@@ -103,10 +103,10 @@ const createChatBox = (data) => {
         <form class="form-inline my-2"></form>
         <div class=" green-border-focus w-100">
             <input type="search" placeholder="Type..." aria-label="Search"
-                class="form-control post-input w-100" id="personal-text">
+                class="form-control post-input bd-r-50 w-100" id="personal-text">
         </div>
 
-        <p class="fa fa-1.5x fa-diamond border-none pd-pos room-send" onclick="(sendPersonalMessage('${myUuid}&${data["user"].uuid}'))"</p>
+        <p class="fa fa-1.5x fa-send  border-none pd-pos send-item-message room-send" onclick="(sendPersonalMessage('${myUuid}&${data["user"].uuid}'))"</p>
         </div>`;
    messageLayout.innerHTML = html;
 }

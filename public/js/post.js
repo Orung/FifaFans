@@ -285,11 +285,11 @@ const generalPost = (data) => {
                     <div class="ml-2">
                       <h4 class="fan-name">${
                         data.owner_name
-                      }<p class="fan-fn">${
+                      }<div class="fan-fn">${
                         data.User.club
                       } <span class="fan-fn">${
                         data.User.status
-                      }</span></p> <span class="fan-time">${GETDURATION(data.createdAt)}(s) ago</span></h4>
+                      }</span></div> <span class="fan-time">${GETDURATION(data.createdAt)}(s) ago</span></h4>
                     
                     </div>
 

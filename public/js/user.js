@@ -123,9 +123,9 @@ const createFriend = (data) => {
          }')"><a href="#">${data.name}</a></span></strong>
          <span><button class="btn btn-info pull-right" onclick="messagePage('${data.user_uuid}')">Message</button></span>
        </p>
-       <p><span class="fan-fn"> ${
+       <div><span class="fan-fn"> ${
          data.club
-       } </span><span class="fan-fn"> (${data.status})</span></p>
+       } </span><span class="fan-fn"> (${data.status})</span></div>
      </div>
   </div>
 </div>`;

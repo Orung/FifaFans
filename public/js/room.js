@@ -172,8 +172,9 @@ const allRooms = (data) => {
               <h4><strong><span><a href="#">${ data.name}</a></span></strong>
                   <span><button class="btn btn-info d-flex pull-right" onclick="gotoRoom('${data.uuid}')">Join Room</button></span>
               </h4>
-              <p><span>${data.members.length} Member(s)</span></p>
-
+          </div>
+          <div>
+          <p><span>${data.members.length} Member(s)</span></p>
           </div>
       </div>
       
@@ -191,7 +192,7 @@ const suggestedRooms = (data) => {
         <p><strong><span><a href="#">${data.name}</a></span></strong>
           <span><button class="btn btn-info pull-right" onclick="gotoRoom('${data.uuid}')">Join room</button></span>
         </p>
-        <span>${data.members.length} Member(s)</span>
+        <p><span>${data.members.length} Member(s)</span></p> 
       </div>
     </div>
 `;

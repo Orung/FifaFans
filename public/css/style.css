@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 *:focus{
   outline: none;
@@ -219,9 +220,11 @@ a {
 
 .imgprofile img {
     border: 1px solid;
-    border-radius: 30%;
+    border-radius: 50%;
     background-color: #005391;
-    height: 100px;
+    height: 150px;
+    width:150px;
+    min-width:150px;
 }
 
 #edit-details {
@@ -229,8 +232,8 @@ a {
 }
 
 #edit-sidebar {
-  border-right: 2px solid #000;
-  height: 60vh;
+  border-right: 1px solid #123856;
+  min-height: 100%;
 }
 
 #edit-sidebar ul {
@@ -398,7 +401,7 @@ a {
 }
 
 .room-box img {
-  width: 50px;
+  width: 40px;
   border: 1px solid;
   border-radius: 50%;
   margin-right: 10px;
@@ -556,6 +559,7 @@ textarea {
   position: fixed;
   max-height: 80%;
   overflow-y: scroll;
+  max-width: 350px;
 }
 
 
@@ -1101,6 +1105,8 @@ textarea { resize: none; }
 
 .room-detail p{
   margin: 0;
+  display:flex;
+  justify-content:space-between;
 }
 .bd-bottom{
   border-bottom: 2px solid #0053918a;
@@ -1166,4 +1172,32 @@ border: 2px solid #ffffff;
 padding: 5px;
 transition: 2s;
 
+}
+.img-fluid{
+  min-width: 100%;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #005391;
+  border-color: #005391;
+}
+.room-detail strong{
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  line-height: 1.8em;
+  white-space: nowrap;
+  max-width: 128px;
+}
+#message-area{
+  cursor: pointer;
+}
+.send-item-message{
+  position: absolute;
+  right: 16px;
+  bottom: 2px;
+}
+.bd-r-50{
+  border-radius:50px;
 }
